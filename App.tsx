@@ -10,6 +10,7 @@ import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
   ScrollView,
+  Button,
   StatusBar,
   StyleSheet,
   Text,
@@ -50,7 +51,19 @@ function App(): React.JSX.Element {
         <View>
           <Text style={styles.sectionHeader}>My Shelf</Text>
         </View>
-        
+        <View>
+        <Button
+        title='History'
+        color='#784F00'
+        onPress={() => {console.log("History Button Works!")}}/>
+        <Button
+        title='Genre'
+        color='#784F00'
+        onPress={() => {console.log("Genre Button Works!")}}/>
+        </View>
+        <View>
+          <Text>Stats</Text>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -72,7 +85,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '400',
   },
-  highlight: {
+  buttonHeader: {
     fontWeight: '700',
   },
 });
