@@ -26,6 +26,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -62,8 +63,22 @@ function App(): React.JSX.Element {
         onPress={() => {console.log("Genre Button Works!")}}/>
         </View>
         <View>
-          <Text>Stats</Text>
+          <Text style={styles.sectionHeader}>Stats</Text>
+          <Text style={styles.sectionText}>12 pages read in total</Text>
+          <Text style={styles.sectionText}>8 pages read on Average</Text>
         </View>
+        <View style={styles.sectionHeader}>
+        <Text style={styles.sectionText}>Last Read</Text>
+          <Text>Title: Name of the Wind</Text>
+          <Text>Author: R.L Stine</Text>
+          <Text>Genre: Car Manual</Text>
+          <Text>Number of Pages: 379</Text>
+          <Text>Date Entered: 2024/04/20</Text>
+        </View>
+        <Button
+        title='+'
+        color='#784F00'
+        onPress={() => {console.log("Add Button Works!")}}/>
       </ScrollView>
     </SafeAreaView>
   );
@@ -84,6 +99,11 @@ const styles = StyleSheet.create({
     marginTop: 8,
     fontSize: 18,
     fontWeight: '400',
+  },
+  sectionText:{
+    fontStyle: 'italic',
+    textAlign: 'center',
+    backgroundColor:'#FFF7E1',
   },
   buttonHeader: {
     fontWeight: '700',
